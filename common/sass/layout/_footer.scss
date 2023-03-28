@@ -1,0 +1,88 @@
+// footer
+// =====================
+.footer {
+    background-color: #004C79;
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 2rem -1rem 0;
+        @include md {
+            width: 100%;
+            margin: 0;
+            justify-content: center;
+        }
+        .menu-item-has-children {
+            font-weight: 700;
+        }
+        &-item {
+            width: calc(100% / 2 - 2rem);
+            margin: 0 1rem 2rem;
+            color: #fff;
+            font-size: 1.6rem;
+            @include md {
+                width: calc(100% / 3 - 2rem);
+                margin: 0;
+                font-size: 2rem;
+                & + .menu-item {
+                    margin-left: 2rem;
+                }
+            }
+            .sub-menu {
+                list-style: none;
+                margin-top: 1.7rem;
+                .menu-item {
+                    width: 100%;
+                    font-weight: 400;
+                    margin: 0;
+                    color: #fff;
+                    font-size: 1.4rem;
+                    @include md {
+                        font-size: 1.6rem;
+                    }
+                    a span {
+                        color: #4A90E2;
+                    }
+                    & + .menu-item {
+                        margin-top: 0.5rem;
+                    }
+                }
+            }
+        }
+
+    }
+    .menu-footer-menu-container {
+        @include md {
+            width: calc(100% - 9.3rem);
+            padding-left: 5rem;
+        }
+        @include lg {
+            padding-left: 9.5rem;
+        }
+    }
+    &-logo {
+        margin: 1.5rem auto 2rem;
+        a {
+            width: 10rem;
+            display: block;
+            margin: 0 auto;
+            @include md {
+                margin: 0;
+                width: 7.4rem;
+            }
+        }
+        @include md {
+            width: 9.3rem;
+            height: 9.3rem;
+            background-color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            margin: 01.5rem 0 2rem ;
+        }
+        img {
+            height: auto;
+        }
+    }
+}
